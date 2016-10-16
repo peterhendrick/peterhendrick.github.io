@@ -13,7 +13,8 @@
 'use strict';
 
 // angular.js main app initialization
-var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.bootstrap']).config(['$routeProvider', function ($routeProvider) {
+var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
+    .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
         templateUrl: 'pages/index.html',
         activetab: 'projects',
