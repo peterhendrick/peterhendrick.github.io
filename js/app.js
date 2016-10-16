@@ -13,7 +13,7 @@
 'use strict';
 
 // angular.js main app initialization
-var app = angular.module('example359', []).
+var app = angular.module('example359', ['ngRoute', 'ngAnimate']).
     config(['$routeProvider', function ($routeProvider) {
       $routeProvider.
         when('/', { templateUrl: 'pages/index.html', activetab: 'projects', controller: HomeCtrl }).
