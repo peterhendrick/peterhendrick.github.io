@@ -34,6 +34,8 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
         controller: AboutCtrl,
         activetab: 'about'
     }).otherwise({redirectTo: '/'});
+
+
 }]).run(['$rootScope', '$http', '$browser', '$timeout', "$route", function ($scope, $http, $browser, $timeout, $route) {
 
     $scope.$on("$routeChangeSuccess", function (scope, next, current) {
@@ -60,6 +62,7 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
 }]);
 
 app.config(['$locationProvider', function ($location) {
-    $location.hashPrefix('!');
+    $location.html5Mode(true);
+    // $location.hashPrefix('!');
 }]);
 
