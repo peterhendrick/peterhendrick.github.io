@@ -14,6 +14,16 @@
 
 // optional controllers
 function HomeCtrl($scope, $http) {
+    $scope.slides = [
+        {
+            image: 'images/denverSkyLine.jpg',
+            id: 1
+        },
+        {
+            image: 'images/cutOffJet.jpg',
+            id: 2
+        }
+    ]
 }
 
 function ProjectCtrl($scope, $http) {
