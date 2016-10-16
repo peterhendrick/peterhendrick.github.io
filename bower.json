@@ -1,7 +1,7 @@
 {
   "name": "mile-high-chauffeur",
   "description": "A starter project for AngularJS",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://milehighchauffeur.herokuapp.com",
   "license": "MIT",
   "private": true,
