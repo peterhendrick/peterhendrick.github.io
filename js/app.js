@@ -62,7 +62,6 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
 }]);
 
 app.config(['$locationProvider', function ($location) {
-    $location.html5Mode(true);
-    // $location.hashPrefix('!');
+    $location.hashPrefix('!');
 }]);
 
