@@ -1,113 +1,111 @@
 <div>
-    <div>
-        <div style="height: 450px">
-            <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                    <img ng-src="{{slide.image}}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{slide.id}}</h4>
-                        <p>{{slide.text}}</p>
-                    </div>
+    <div style="height: 450px">
+        <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+            <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}" style="margin:auto;">
+                <div class="carousel-caption">
+                    <h4>Slide {{slide.id}}</h4>
+                    <p>{{slide.text}}</p>
                 </div>
             </div>
         </div>
-        <!--<div class="row">-->
-            <!--<div class="col-md-6">-->
-                <!--<button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>-->
-                <!--<button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>-->
-                <!--<div class="checkbox">-->
-                    <!--<label>-->
-                        <!--<input type="checkbox" ng-model="noWrapSlides">-->
-                        <!--Disable Slide Looping-->
-                    <!--</label>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-6">-->
-                <!--Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">-->
-                <!--<br />Enter a negative number or 0 to stop the interval.-->
+    </div>
+    <!--<div class="row">-->
+        <!--<div class="col-md-6">-->
+            <!--<button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>-->
+            <!--<button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>-->
+            <!--<div class="checkbox">-->
+                <!--<label>-->
+                    <!--<input type="checkbox" ng-model="noWrapSlides">-->
+                    <!--Disable Slide Looping-->
+                <!--</label>-->
             <!--</div>-->
         <!--</div>-->
-    </div>
-
-    <div style="width:100%">
-        <div style="background-color:#516494">
-            <h1>Ski Resort Transportation</h1>
-            <div class="wrap">
-                <a class="projectObj" href="#!/project/product1">
-                    <img class="img" src="images/linkButton.png" />
-                </a>
-            </div>
-        </div>
-        <div class="name"  style="background-color:#516494">
-            <h1>Corporate Travel</h1>
-            <div class="wrap">
-                <a class="projectObj" href="#!/project/product2">
-                    <img class="img" src="images/linkButton.png" />
-                </a>
-            </div>
-        </div>
-        <div class="name"  style="background-color:#516494">
-            <h1>Airport Transfers</h1>
-            <div class="wrap">
-                <a class="projectObj" href="#!/project/product3">
-                    <img class="img" src="images/linkButton.png" />
-                </a>
-            </div>
-        </div>
-        <ng-include src="'pages/footer.html'"></ng-include>
-    </div>
-
-    <script>
-    $('.projectObj').bind('click', function (e) {
-    e.preventDefault();
-
-        var me = this;
-        var width = $(me).width() / 1.5;
-        $(me).find('.wrap').width($(me).find('.wrap').width());
-
-        $(me).animate({
-            opacity: 0,
-            marginLeft: -width
-        }, 500);
-
-        var delayN = 150;
-        var delayP = 150;
-
-        var nextEl = $(me).nextAll('.projectObj');
-        var prevEl = $(me).prevAll('.projectObj');
-
-        nextEl.each(function (index, elem) {
-            setTimeout(function () {
-
-                $(elem).find('.wrap').width($(elem).find('.wrap').width());
-
-                $(elem).animate({
-                    opacity: 0,
-                    marginLeft: -width
-                  }, 500, function () {
-                });
-            }, delayN);
-            delayN += 100;
-        });
-
-        prevEl.each(function (index, elem) {
-            setTimeout(function () {
-                $(elem).find('.wrap').width($(elem).find('.wrap').width());
-
-                $(elem).animate({
-                    opacity: 0,
-                    marginLeft: -width
-                  }, 500, function () {
-                });
-            }, delayP);
-            delayP += 100;
-        });
-
-        setTimeout(function () {
-            document.location = $(me).attr('href');
-        },1000)
-
-        return false;
-    });
-    </script>
+        <!--<div class="col-md-6">-->
+            <!--Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">-->
+            <!--<br />Enter a negative number or 0 to stop the interval.-->
+        <!--</div>-->
+    <!--</div>-->
 </div>
+
+<div style="width:100%">
+    <div style="background-color:#516494">
+        <h1>Ski Resort Transportation</h1>
+        <div class="wrap">
+            <a class="projectObj" href="#!/project/product1">
+                <img class="img" src="images/linkButton.png" />
+            </a>
+        </div>
+    </div>
+    <div class="name"  style="background-color:#516494">
+        <h1>Corporate Travel</h1>
+        <div class="wrap">
+            <a class="projectObj" href="#!/project/product2">
+                <img class="img" src="images/linkButton.png" />
+            </a>
+        </div>
+    </div>
+    <div class="name"  style="background-color:#516494">
+        <h1>Airport Transfers</h1>
+        <div class="wrap">
+            <a class="projectObj" href="#!/project/product3">
+                <img class="img" src="images/linkButton.png" />
+            </a>
+        </div>
+    </div>
+    <ng-include src="'pages/footer.html'"></ng-include>
+</div>
+
+<script>
+$('.projectObj').bind('click', function (e) {
+e.preventDefault();
+
+    var me = this;
+    var width = $(me).width() / 1.5;
+    $(me).find('.wrap').width($(me).find('.wrap').width());
+
+    $(me).animate({
+        opacity: 0,
+        marginLeft: -width
+    }, 500);
+
+    var delayN = 150;
+    var delayP = 150;
+
+    var nextEl = $(me).nextAll('.projectObj');
+    var prevEl = $(me).prevAll('.projectObj');
+
+    nextEl.each(function (index, elem) {
+        setTimeout(function () {
+
+            $(elem).find('.wrap').width($(elem).find('.wrap').width());
+
+            $(elem).animate({
+                opacity: 0,
+                marginLeft: -width
+              }, 500, function () {
+            });
+        }, delayN);
+        delayN += 100;
+    });
+
+    prevEl.each(function (index, elem) {
+        setTimeout(function () {
+            $(elem).find('.wrap').width($(elem).find('.wrap').width());
+
+            $(elem).animate({
+                opacity: 0,
+                marginLeft: -width
+              }, 500, function () {
+            });
+        }, delayP);
+        delayP += 100;
+    });
+
+    setTimeout(function () {
+        document.location = $(me).attr('href');
+    },1000);
+
+    return false;
+});
+</script>
