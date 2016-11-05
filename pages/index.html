@@ -28,7 +28,7 @@
 
 <script>
 $('.projectObj').bind('click', function (e) {
-    e.preventDefault();
+e.preventDefault();
 
     var me = this;
     var width = $(me).width() / 1.5;
@@ -47,7 +47,7 @@ $('.projectObj').bind('click', function (e) {
 
     nextEl.each(function (index, elem) {
         setTimeout(function () {
-            
+
             $(elem).find('.wrap').width($(elem).find('.wrap').width());
 
             $(elem).animate({
@@ -74,7 +74,7 @@ $('.projectObj').bind('click', function (e) {
 
     setTimeout(function () {
         document.location = $(me).attr('href');
-    },1000)
+    },1000);
 
     return false;
 });
