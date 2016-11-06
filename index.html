@@ -48,9 +48,9 @@
             <div class="head">Contact Us</div>
             <img class="close" src="images/close.png" ng-click="closeForm()" />
             <form action="https://formspree.io/thomas@milehighchauffeur.com" method="POST">
-                <input class="input" required="required" type="text" name="name" placeholder="your name">
-                <input class="input email" required="required" type="email" name="_replyto" placeholder="your email"/><br />
-                <textarea class="textarea" rows="5" name="message" required="required" placeholder="your message"></textarea>
+                <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="contactName">
+                <input class="input email" required="required" type="email" name="_replyto" placeholder="your email" ng-model="email"/><br />
+                <textarea class="textarea" rows="5" name="message" required="required" placeholder="your message" ng-model="message"></textarea>
                 <input type="submit" value="Send">
             </form>
 

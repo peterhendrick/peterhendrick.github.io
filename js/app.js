@@ -41,6 +41,11 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
     $scope.$on("$routeChangeSuccess", function (scope, next, current) {
         $scope.part = $route.current.activetab;
         $scope.carouselFlag = ($route.current.loadedTemplateUrl === 'pages/index.html');
+        if($scope.carouselFlag) {
+            $scope.contactName = '';
+            $scope.email = '';
+            $scope.message = '';
+        }
     });
 
     // onclick event handlers
