@@ -28,14 +28,14 @@
     <header>
         <div class="wrap" style="background-color:#8e888b">
             <!-- logo -->
-            <a href="#!/"><img class="logo" src="images/mileHighChauffeurLogo.png" /></a>
+            <a href="#!/" ng-click="closeForm()"><img class="logo" src="images/mileHighChauffeurLogo.png" /></a>
 
             <!-- navigation menu -->
             <nav>
                 <ul>
-                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}" >Our Projects</a></li>
-                    <li><a id="privacyBtn" href="#!/privacy" ng-class="{activeSmall:part == 'privacy'}">Privacy &amp; Terms</a></li>
-                    <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}">About</a></li>
+                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}" ng-click="closeForm()">Our Projects</a></li>
+                    <li><a id="privacyBtn" href="#!/privacy" ng-class="{activeSmall:part == 'privacy'}" ng-click="closeForm()">Privacy &amp; Terms</a></li>
+                    <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}" ng-click="closeForm()">About</a></li>
                     <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact Us</a></li>
                 </ul>
             </nav>
@@ -47,11 +47,11 @@
         <div class="wrap">
             <div class="head">Contact Us</div>
             <img class="close" src="images/close.png" ng-click="closeForm()" />
-            <form ng-submit="save()" class="contactForm" name="form" ng-hide="loaded">
-                <input class="input" required="required" type="text" name="name" placeholder="your name" ng-model="message.name" />
-                <input class="input email" required="required" type="email" name="email" value="" placeholder="your email" ng-model="message.email" /><br />
-                <textarea class="textarea" rows="5" required="required" placeholder="your message" ng-model="message.text" ></textarea>
-                <button class="btn green">send message</button>
+            <form action="https://formspree.io/thomas@milehighchauffeur.com" method="POST">
+                <input class="input" required="required" type="text" name="name" placeholder="your name">
+                <input class="input email" required="required" type="email" name="_replyto" placeholder="your email"/><br />
+                <textarea class="textarea" rows="5" name="message" required="required" placeholder="your message"></textarea>
+                <input type="submit" value="Send">
             </form>
 
             <!-- contact us form response messages -->
@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div id="mainCarousel" class="carousel slide">
+    <div id="mainCarousel" class="carousel slide" ng-show="carouselFlag">
         <ol class="carousel-indicators">
             <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#mainCarousel" data-slide-to="1"></li>

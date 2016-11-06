@@ -40,6 +40,7 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
 
     $scope.$on("$routeChangeSuccess", function (scope, next, current) {
         $scope.part = $route.current.activetab;
+        $scope.carouselFlag = ($route.current.loadedTemplateUrl === 'pages/index.html');
     });
 
     // onclick event handlers
@@ -48,16 +49,6 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
     };
     $scope.closeForm = function () {
         $('.contactRow').slideUp();
-    };
-
-    // save the 'Contact Us' form
-    $scope.save = function () {
-        $scope.loaded = true;
-        $scope.process = true;
-        $http.post('sendemail.php', $scope.message).success(function () {
-            $scope.success = true;
-            $scope.process = false;
-        });
     };
 }]);
 
