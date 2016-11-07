@@ -14,14 +14,15 @@
 
 // angular.js main app initialization
 var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
-    .config(['$routeProvider', function ($routeProvider) {
+    .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
+
     $routeProvider.when('/', {
         templateUrl: 'pages/index.html',
         activetab: 'projects',
         controller: HomeCtrl
-    }).when('/project/:projectId', {
+    }).when('/services/:serviceId', {
         templateUrl: function (params) {
-            return 'pages/' + params.projectId + '.html';
+            return 'pages/' + params.serviceId + '.html';
         },
         controller: ProjectCtrl,
         activetab: 'projects'
@@ -35,6 +36,7 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
         activetab: 'about'
     }).otherwise({redirectTo: '/'});
 
+    $locationProvider.html5Mode(true);
 
 }]).run(['$rootScope', '$http', '$browser', '$timeout', "$route", function ($scope, $http, $browser, $timeout, $route) {
 
@@ -58,6 +60,5 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
 }]);
 
 app.config(['$locationProvider', function ($location) {
-    $location.hashPrefix('!');
 }]);
 
