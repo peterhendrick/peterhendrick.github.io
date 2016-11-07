@@ -36,10 +36,11 @@ angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
 
     // $locationProvider.html5Mode(true);
 
-}]).run(['$rootScope', '$http', '$browser', '$timeout', "$route", function ($scope, $http, $browser, $timeout, $route) {
+}]).run(['$rootScope', '$http', '$browser', '$timeout', '$route', '$window', function ($scope, $http, $browser, $timeout, $route, $window) {
 
     $scope.$on("$routeChangeSuccess", function (scope, next, current) {
         $scope.part = $route.current.activetab;
+        $window.scrollTo(0, 0);
         $scope.carouselFlag = ($route.current.loadedTemplateUrl === 'pages/index.html');
         if($scope.carouselFlag) {
             $scope.contactName = '';
