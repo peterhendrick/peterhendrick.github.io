@@ -1,81 +1,20 @@
-<div style="width:100%">
-    <div style="background-color:#516494">
-        <h1>Ski Resort Transportation</h1>
-        <div class="wrap">
-            <a class="projectObj" href="#!/project/product1">
-                <img class="img" src="images/linkButton.png" />
-            </a>
+<!--<div>Hello World!</div>-->
+
+<div class="wraphomecontainer milehighmain">
+    <a class="projectObj" href="#!/project/product1">
+        <div flex class="skipagelink" style="background-color:#516494">
+            <h2>Ski Resort Transportation</h2>
         </div>
-    </div>
-    <div class="name"  style="background-color:#516494">
-        <h1>Corporate Travel</h1>
-        <div class="wrap">
-            <a class="projectObj" href="#!/project/product2">
-                <img class="img" src="images/linkButton.png" />
-            </a>
+    </a>
+    <a class="projectObj" href="#!/project/product2">
+        <div flex class="corporatetravellink" style="background-color:#516494">
+            <h2>Corporate Travel</h2>
         </div>
-    </div>
-    <div class="name"  style="background-color:#516494">
-        <h1>Airport Transfers</h1>
-        <div class="wrap">
-            <a class="projectObj" href="#!/project/product3">
-                <img class="img" src="images/linkButton.png" />
-            </a>
+    </a>
+    <a class="projectObj" href="#!/project/product3">
+        <div flex class="airportlink" style="background-color:#516494">
+            <h2>Airport Transfers</h2>
         </div>
-    </div>
-    <ng-include src="'pages/footer.html'"></ng-include>
+    </a>
 </div>
-
-<script>
-$('.projectObj').bind('click', function (e) {
-e.preventDefault();
-
-    var me = this;
-    var width = $(me).width() / 1.5;
-    $(me).find('.wrap').width($(me).find('.wrap').width());
-
-    $(me).animate({
-        opacity: 0,
-        marginLeft: -width
-    }, 500);
-
-    var delayN = 150;
-    var delayP = 150;
-
-    var nextEl = $(me).nextAll('.projectObj');
-    var prevEl = $(me).prevAll('.projectObj');
-
-    nextEl.each(function (index, elem) {
-        setTimeout(function () {
-
-            $(elem).find('.wrap').width($(elem).find('.wrap').width());
-
-            $(elem).animate({
-                opacity: 0,
-                marginLeft: -width
-              }, 500, function () {
-            });
-        }, delayN);
-        delayN += 100;
-    });
-
-    prevEl.each(function (index, elem) {
-        setTimeout(function () {
-            $(elem).find('.wrap').width($(elem).find('.wrap').width());
-
-            $(elem).animate({
-                opacity: 0,
-                marginLeft: -width
-              }, 500, function () {
-            });
-        }, delayP);
-        delayP += 100;
-    });
-
-    setTimeout(function () {
-        document.location = $(me).attr('href');
-    },1000);
-
-    return false;
-});
-</script>
+<ng-include src="'pages/footer.html'"></ng-include>

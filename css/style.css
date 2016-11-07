@@ -99,21 +99,66 @@ input:focus, textarea:focus {
     vertical-align: middle;
 }
 
+.skipagelink {
+    background-image: url('/images/vailResort.jpg');
+    background-size: cover;
+    width: available;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    border: solid 1px #303030;
+    cursor: pointer;
+}
+
+.corporatetravellink {
+    background-image: url('/images/downtownDenver.jpg');
+    background-size: cover;
+    width: available;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    border: solid 1px #303030;
+    cursor: pointer;
+}
+
+.airportlink {
+     background-image: url('/images/dia.jpg');
+     background-size: cover;
+     width: available;
+     height: 300px;
+     margin: 20px;
+     position: relative;
+     border: solid 1px #303030;
+     cursor: pointer;
+ }
+
+.wraphomecontainer {
+    width: available;
+    float: none;
+    height: 1100px;
+    /*background-color: #8e888b;*/
+    padding: 20px;
+    /*margin-bottom: 5px;*/
+}
+
+.milehighmain {
+    background-image: url('/images/backgroundTexture.jpg');
+}
+
+
 /* header section */
 header {
-    height: 110px;
+    height: 140px;
+    min-height: 140px;
+    max-height: 500px;
 }
 
 header .wrap {
     height: 100%;
 }
 
-header .logo {
-    margin-top: 10px;
-}
-
 header nav {
-    float: right;
+    float: left;
     margin-top: 17px;
 }
 
@@ -148,12 +193,14 @@ header nav ul li a.active:hover {
 }
 
 header nav ul li a:hover, header nav ul li a.activeSmall {
+    margin-top: 10px;
     color: #c33c3a;
 }
 
 /* footer section */
 footer .copyright {
-    color: #adadad;
+    color: #191c23;
+    font-weight: bold;
     margin-bottom: 50px;
     margin-top: 50px;
     text-align: center;
@@ -188,6 +235,7 @@ footer .copyright {
 }
 
 .paddRow.aboutRow {
+    margin-top: 100px;
     background-color: #516494;
     color: #FFF !important;
     display: block;
@@ -244,6 +292,7 @@ footer .copyright {
 }
 
 .projectHead.product {
+    margin-top: 100px;
     background-color: #516494;
 }
 
