@@ -25,13 +25,11 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
             return 'pages/' + params.serviceId + '.html';
         },
         controller: ProjectCtrl,
-        activetab: 'projects'
-    }).when('/privacy', {
-        templateUrl: 'pages/privacy.html',
-        controller: PrivacyCtrl,
-        activetab: 'privacy'
+        activetab: 'services'
     }).when('/about', {
-        templateUrl: 'pages/about.html',
+        templateUrl: function() {
+            return 'pages/about.html'
+        },
         controller: AboutCtrl,
         activetab: 'about'
     }).otherwise({redirectTo: '/'});
