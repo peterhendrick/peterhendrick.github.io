@@ -23,20 +23,16 @@
 
 <body style="background-color:#8e888b">
     <header>
-        <div class="wrap" style="background-color:#8e888b">
-            <!-- logo -->
-            <a href="#!/" ng-click="closeForm()"><img class="logo" src="images/logoIowan.png" /></a>
-
-            <!-- navigation menu -->
-            <nav>
-                <ul>
-                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}" ng-click="closeForm()">Our Projects</a></li>
-                    <li><a id="privacyBtn" href="#!/privacy" ng-class="{activeSmall:part == 'privacy'}" ng-click="closeForm()">Privacy &amp; Terms</a></li>
-                    <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}" ng-click="closeForm()">About</a></li>
-                    <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
+        <!-- navigation menu -->
+        <nav>
+            <ul>
+                <li><a id="logoBtn" href="#!/" ng-click="closeForm()"><img src="images/logoIowan.png" /></a></li>
+                <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}" ng-click="closeForm()">Our Projects</a></li>
+                <!--<li><a id="privacyBtn" href="#!/privacy" ng-class="{activeSmall:part == 'privacy'}" ng-click="closeForm()">Privacy &amp; Terms</a></li>-->
+                <li><a id="aboutBtn" href="#!/about" ng-class="{activeSmall:part == 'about'}" ng-click="closeForm()">About</a></li>
+                <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- contact us form -->

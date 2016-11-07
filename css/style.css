@@ -104,7 +104,7 @@ input:focus, textarea:focus {
     background-size: cover;
     width: available;
     height: 300px;
-    margin: 10px;
+    margin: 20px;
     position: relative;
     border: solid 1px #303030;
     cursor: pointer;
@@ -115,7 +115,7 @@ input:focus, textarea:focus {
     background-size: cover;
     width: available;
     height: 300px;
-    margin: 10px;
+    margin: 20px;
     position: relative;
     border: solid 1px #303030;
     cursor: pointer;
@@ -126,7 +126,7 @@ input:focus, textarea:focus {
      background-size: cover;
      width: available;
      height: 300px;
-     margin: 10px;
+     margin: 20px;
      position: relative;
      border: solid 1px #303030;
      cursor: pointer;
@@ -135,7 +135,7 @@ input:focus, textarea:focus {
 .wraphomecontainer {
     width: available;
     float: none;
-    height: 1000px;
+    height: 1100px;
     /*background-color: #8e888b;*/
     padding: 20px;
     /*margin-bottom: 5px;*/
@@ -145,29 +145,20 @@ input:focus, textarea:focus {
     background-image: url('/images/backgroundTexture.jpg');
 }
 
-/*.wraphomeright:before {*/
-    /*content: '';*/
-    /*display: inline-block;*/
-    /*height: 100%;*/
-    /*margin-right: -0.25em;*/
-    /*vertical-align: middle;*/
-/*}*/
 
 /* header section */
 header {
-    height: 110px;
+    height: 140px;
+    min-height: 140px;
+    max-height: 500px;
 }
 
 header .wrap {
     height: 100%;
 }
 
-header .logo {
-    margin-top: 10px;
-}
-
 header nav {
-    float: right;
+    float: left;
     margin-top: 17px;
 }
 
@@ -202,6 +193,7 @@ header nav ul li a.active:hover {
 }
 
 header nav ul li a:hover, header nav ul li a.activeSmall {
+    margin-top: 10px;
     color: #c33c3a;
 }
 
@@ -243,6 +235,7 @@ footer .copyright {
 }
 
 .paddRow.aboutRow {
+    margin-top: 100px;
     background-color: #516494;
     color: #FFF !important;
     display: block;
@@ -299,6 +292,7 @@ footer .copyright {
 }
 
 .projectHead.product {
+    margin-top: 100px;
     background-color: #516494;
 }
 
