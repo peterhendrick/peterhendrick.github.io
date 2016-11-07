@@ -13,7 +13,7 @@
 'use strict';
 
 // angular.js main app initialization
-var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
+angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
     .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 
     $routeProvider.when('/', {
@@ -34,7 +34,7 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
         activetab: 'about'
     }).otherwise({redirectTo: '/'});
 
-    $locationProvider.html5Mode(true);
+    // $locationProvider.html5Mode(true);
 
 }]).run(['$rootScope', '$http', '$browser', '$timeout', "$route", function ($scope, $http, $browser, $timeout, $route) {
 
@@ -57,6 +57,6 @@ var app = angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.boots
     };
 }]);
 
-app.config(['$locationProvider', function ($location) {
-}]);
+// app.config(['$locationProvider', function ($location) {
+// }]);
 
