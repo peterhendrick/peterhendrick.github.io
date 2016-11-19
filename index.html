@@ -18,20 +18,20 @@
     <!--<base href="/">-->
 
     <!-- add styles -->
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="bower_components/angular-material/angular-material.min.css" rel="stylesheet" type="text/css" />
-
-     <!--add javascripts -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body style="background-image: url('images/whiteTextureBackground.jpg')">
     <header>
         <!-- navigation menu -->
+        <a id="headerLogo" href="#!/" ng-click="closeForm()"><img class="logo" src="images/logoIowan.png" /></a>
+
         <nav>
             <ul>
-                <li><a id="logoBtn" href="#/" ng-click="closeForm()"><img src="images/logoIowan.png" /></a></li>
+                <!--<li><a id="headerLogo" href="#/" ng-click="closeForm()"><img src="images/logoIowan.png" /></a></li>-->
                 <li><a id="workBtn" href="#/" ng-class="{activeSmall:part == 'services'}" ng-click="closeForm()">Our Services</a></li>
                 <li><a id="aboutBtn" href="#/about" ng-class="{activeSmall:part == 'about'}" ng-click="closeForm()">About</a></li>
                 <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact Us</a></li>
