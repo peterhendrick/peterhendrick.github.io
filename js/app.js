@@ -26,6 +26,12 @@ angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
         },
         controller: ProjectCtrl,
         activetab: 'services'
+    }).when('/our-cars', {
+        templateUrl: function () {
+            return 'pages/our-cars.html'
+        },
+        controller: OurCarsCtrl,
+        activetab: 'ourCars'
     }).when('/about', {
         templateUrl: function () {
             return 'pages/about.html';

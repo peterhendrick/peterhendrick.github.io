@@ -265,32 +265,46 @@ footer .copyright {
     width: 38px;
 }
 
-.about {
-    color: #818181;
-}
-
 .about section {
     margin: 0 0 10%;
 }
 
+.about p {
+    color: #191c23;
+    font-weight: bold;
+}
+
 .about .head {
     font-size: 4em;
-    font-weight: 100;
+    font-weight: bold;
+    color: #191c23;
     margin: 3% 0;
 }
 
 .about .subHead {
     font-size: 2.5em;
-    font-weight: 100;
+    font-weight: bold;
+    color: #191c23;
     margin: 0 0 3%;
 }
 
+.about ul {
+    list-style: none;
+}
+
+.about ul li {
+    font-weight: bold;
+    color: #191c23;
+}
+
 .about .txt {
-    width: 60%;
+    width: 50%;
+    text-align: center;
 }
 
 .about .image {
-    width: 26%;
+    width: 45%;
+    margin: 10px;
 }
 
 .about .flLeft {
@@ -641,6 +655,10 @@ button {
     }
 
     #workBtn {
+        display: none;
+    }
+
+    #aboutBtn {
         display: none;
     }
 
