@@ -27,11 +27,16 @@ angular.module('mileHighChauffeur', ['ngRoute', 'ngAnimate', 'ui.bootstrap'])
         controller: ProjectCtrl,
         activetab: 'services'
     }).when('/about', {
-        templateUrl: function() {
-            return 'pages/about.html'
+        templateUrl: function () {
+            return 'pages/about.html';
         },
         controller: AboutCtrl,
         activetab: 'about'
+    }).when('/thank-you', {
+        templateUrl: function () {
+            return 'pages/thank-you.html';
+        },
+        controller: ThankYouCtrl
     }).otherwise({redirectTo: '/'});
 
     // $locationProvider.html5Mode(true);
