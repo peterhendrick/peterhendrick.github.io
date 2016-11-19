@@ -34,7 +34,8 @@ a img {
 
 h1 {
     font-size: 3.5em;
-    font-weight: 100;
+    color: #191c23;
+    font-weight: bold;
 }
 
 p {
@@ -91,6 +92,7 @@ input:focus, textarea:focus {
     position: relative;
     width: 100%;
     font-weight: bold;
+    color: #191c23;
 }
 
 .wrap:before {
@@ -110,6 +112,7 @@ input:focus, textarea:focus {
     position: relative;
     border: solid 1px #303030;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .corporatetravellink {
@@ -121,6 +124,7 @@ input:focus, textarea:focus {
     position: relative;
     border: solid 1px #303030;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .airportlink {
@@ -132,15 +136,14 @@ input:focus, textarea:focus {
      position: relative;
      border: solid 1px #303030;
      cursor: pointer;
+    font-weight: bold;
  }
 
 .wraphomecontainer {
     width: available;
     float: none;
     height: 1100px;
-    /*background-color: #8e888b;*/
     padding: 20px;
-    /*margin-bottom: 5px;*/
 }
 
 .milehighmain {
@@ -250,7 +253,7 @@ footer .copyright {
 
 .paddRow .head {
     font-size: 4em;
-    font-weight: 100;
+    font-weight: bold;
     margin: 40px 0;
 }
 
@@ -299,8 +302,9 @@ footer .copyright {
 }
 
 .projectHead.product {
-    /*margin-top: 100px;*/
     background-color: #516494;
+    color: #191c23;
+    font-weight: bold;
 }
 
 .projectHead .picture {
@@ -313,6 +317,7 @@ footer .copyright {
 }
 
 .projectHead .text {
+    font-weight: bold;
     position: absolute;
     width: 49%;
 }
