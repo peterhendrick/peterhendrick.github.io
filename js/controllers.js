@@ -24,3 +24,6 @@ function PrivacyCtrl($scope, $http, $timeout) {
 
 function AboutCtrl($scope, $http, $timeout) {
 }
+
+function ThankYouCtrl($scope, $http, $timeout) {
+}
