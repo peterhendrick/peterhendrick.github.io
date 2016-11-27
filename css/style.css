@@ -103,7 +103,7 @@ input:focus, textarea:focus {
     vertical-align: middle;
 }
 
-.skipagelink {
+.skiPageLink {
     background-image: url('/images/stockPhotos/vailResort.jpg');
     background-size: cover;
     width: available;
@@ -115,7 +115,7 @@ input:focus, textarea:focus {
     font-weight: bold;
 }
 
-.corporatetravellink {
+.corporateTravelLink {
     background-image: url('/images/stockPhotos/denverNight.jpg');
     background-size: cover;
     width: available;
@@ -127,8 +127,8 @@ input:focus, textarea:focus {
     font-weight: bold;
 }
 
-.airportlink {
-     background-image: url('/images/stockPhotos/funny/planeWreckage.jpg');
+.airportLink {
+     background-image: url('/images/stockPhotos/runwayPlane.jpg');
      background-size: cover;
      width: available;
      height: 300px;
@@ -138,30 +138,6 @@ input:focus, textarea:focus {
      cursor: pointer;
      font-weight: bold;
  }
-
-.skiPageImage {
-    background-image: url('/images/stockPhotos/mountainValley.jpg');
-    background-size: contain;
-    width: 500px;
-    height: 331px;
-    margin: 20px;
-}
-
-.corporatePageImage {
-    background-image: url('/images/stockPhotos/funny/manRunning.jpg');
-    background-size: contain;
-    width: 500px;
-    height: 333px;
-    margin: 20px;
-}
-
-.airportPageImage {
-    background-image: url('/images/stockPhotos/funny/planeInTree.jpg');
-    background-size: contain;
-    width: 500px;
-    height: 375px;
-    margin: 20px;
-}
 
 .wraphomecontainer {
     width: available;
